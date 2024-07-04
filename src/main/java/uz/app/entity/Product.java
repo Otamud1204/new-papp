@@ -10,4 +10,7 @@ import lombok.NoArgsConstructor;
 public class Product {
     private String name;
     private Double price;
+
+    public Product(String s, double v) {
+    }
 }
