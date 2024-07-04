@@ -1,9 +1,5 @@
-
-
-
 import com.google.gson.Gson;
 import com.sun.mail.imap.protocol.ID;
-import uz.app.entity.*;
 
 import java.io.IOException;
 import java.net.URI;
@@ -12,9 +8,6 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.Scanner;
-
-import static java.lang.ref.Cleaner.create;
-import static jdk.internal.editor.external.ExternalEditor.edit;
 
 public class Main {
     static String baseUrl = "http://localhost:8080/api/users";
@@ -76,6 +69,7 @@ public class Main {
         System.out.println("enter user id");
         String userId = strScanner.nextLine();
         String path = baseUrl + "/" + userId;
+
         HttpRequest req = HttpRequest
                 .newBuilder()
                 .uri(new URI(path))
